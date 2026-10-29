@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Платформер: Спасение кота</title>
+
+  <!-- Montserrat -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="page">
+    <section class="game-shell">
+      <header class="hud">
+        <h1>Спасение кота</h1>
+        <p class="hint">
+          Управление: стрелки или A/D — движение, Space или W — прыжок.  
+          Собери 3 рыбки, не падай в лаву и добеги до флажка.  
+          R — заново.
+        </p>
+      </header>
+
+      <div class="status">
+        <span id="stateLabel">Состояние: остановлено</span>
+        <span id="fishLabel">Рыбки: 0/3</span>
+        <span id="bestLabel">Рекорд: 0/3</span>
+      </div>
+
+      <div class="canvas-wrap">
+        <canvas id="game" width="800" height="450"></canvas>
+      </div>
+
+      <div class="controls">
+        <button id="startBtn" class="btn" type="button">Старт</button>
+        <button id="pauseBtn" class="btn" type="button">Пауза</button>
+        <button id="resumeBtn" class="btn" type="button">Продолжить</button>
+        <button id="restartBtn" class="btn" type="button">Заново</button>
+      </div>
+
+      <div class="touch-controls" aria-label="Сенсорное управление">
+        <div class="touch-dpad">
+          <button id="leftBtn" class="touch-btn" type="button" aria-label="Влево">
+            ◀
+          </button>
+          <button id="rightBtn" class="touch-btn" type="button" aria-label="Вправо">
+            ▶
+          </button>
+        </div>
+
+        <button id="jumpBtn" class="touch-btn jump-btn" type="button" aria-label="Прыжок">
+          ▲
+        </button>
+      </div>
+    </section>
+  </main>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
